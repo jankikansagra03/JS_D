@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function b1() {
+            alert("hello");
+            var a = document.getElementById('a11').value;
+            a = parseInt(a);
+            var b = document.getElementById('a12').value;
+            b = parseInt(b);
+            var c = a + b;
+            alert(c);
+            alert(a);
+            alert(b);
+        }
+    </script>
+</head>
+
+<body>
+    <form action="">
+        Enter value of a:
+        <input type="text" name="a1" id="a11">
+        <br>
+        Enter value of b:
+        <input type="text" name="a2" id="a12">
+        <br>
+        <input type="button" value="Display A" onclick="b1()">
+    </form>
+</body>
+
+</html>

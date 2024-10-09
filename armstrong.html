@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+        function armstrong(a) {
+            // var num = document.getElementById("n2").value;
+            // alert(num);
+            var sum = 0;
+            alert(a);
+            a = parseInt(a);
+            var num = a;
+            while (a != 0) {
+                var x = a % 10;
+                sum = sum + x * x * x;
+                a = parseInt(a / 10);
+            }
+            if (sum == num) {
+                document.getElementById("ans").innerHTML =
+                    num + " is Armstrong Number";
+            } else {
+                document.getElementById("ans").innerHTML =
+                    num + " is Not Armstrong Number";
+            }                                                                                                                                      
+        }
+    </script>
+</head>
+
+<body>
+    Enter number:
+    <input type="text" name="n1" id="n2" />
+    <br />
+    <input type="button" value="Submit" onclick="armstrong(document.getElementById('n2').value)" />
+    <p id="ans">Answer Will be Displayed here</p>
+</body>
+
+</html>
