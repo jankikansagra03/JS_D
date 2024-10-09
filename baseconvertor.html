@@ -68,6 +68,13 @@
         to_base = parseInt(document.getElementById("to_base").value);
         ans = "";
         if (from_base == 10 && to_base == 2) {
+          var regex = /^[0-9]+$/;
+          if (!regex.test(document.getElementById("n").value)) {
+            document.getElementById("p1").style.color = "red";
+            document.getElementById("p1").innerHTML =
+              "Error: Input must contain only digits.";
+            return;
+          }
           while (n != 0) {
             ans = ans + (n % 2);
             n = parseInt(n / 2);
@@ -84,6 +91,12 @@
           document.getElementById("p1").style.color = "green";
           document.getElementById("p1").innerHTML = ans;
         } else if (from_base == 10 && to_base == 16) {
+          if (!regex.test(document.getElementById("n").value)) {
+            document.getElementById("p1").style.color = "red";
+            document.getElementById("p1").innerHTML =
+              "Error: Input must contain only digits.";
+            return;
+          }
           while (n != 0) {
             if (n % 16 <= 9) {
               ans1 = n % 16;
@@ -230,9 +243,15 @@
           dec = 0;
           while (n != 0) {
             a = n % 10;
-            dec = dec + (n % 10) * Math.pow(8, i);
-            n = parseInt(n / 10);
-            i++;
+            if (a > 7) {
+              document.getElementById("p1").style.color = "red";
+              document.getElementById("p1").innerHTML = "Invalid Octal number";
+              break;
+            } else {
+              dec = dec + (n % 10) * Math.pow(8, i);
+              n = parseInt(n / 10);
+              i++;
+            }
           }
           alert(dec);
           ans = "";
