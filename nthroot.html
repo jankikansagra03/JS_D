@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>nth root</title>
+</head>
+<body>
+    <input type="number" name="" id="number" placeholder="enter number">
+    <input type="number" id="root" placeholder="enter root">
+    <input type="button" value="clicck here" onclick="change()">
+    <script type="text/javascript">
+        function change(){
+            var num=parseInt(document.getElementById('number').value);
+            var root=parseInt(document.getElementById('root').value);
+            var answer;
+            answer=Math.pow(num,1/root);
+            document.write(answer);
+
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function check123() {
+        var test = document.getElementById("n11").value;
+        test = parseInt(test);
+        while (test != 1) {
+          if (test % 2 != 0) {
+            var flag = 1;
+            break;
+          }
+          test = parseInt(test / 2);
+        }
+        if (flag == 1) {
+          document.getElementById("p1").innerHTML = "NO";
+        } else {
+          document.getElementById("p1").innerHTML = "YES";
+        }
+      }
+    </script>
+  </head>
+
+  <body>
+    enter number : <input type="text" name="n1" id="n11" />
+    <br />
+    <input type="button" value="Check" onclick="check123()" />
+    <p id="p1">answer</p>
+  </body>
+</html>

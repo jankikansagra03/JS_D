@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>color</title>
+    <style>
+      button {
+        padding: 20px;
+        border-radius: 15%;
+      }
+      body {
+        background-image: image("wallpaperflare.com_wallpaper.jpg");
+      }
+    </style>
+  </head>
+  <body>
+    <button style="background-color: red" onclick="color1()">red</button>
+    <button style="background-color: yellow" onclick="color2()">yellow</button>
+    <button style="background-color: lightblue" onclick="color3()">
+      lightblue
+    </button>
+    <button style="background-color: orange" onclick="color4()">orange</button>
+    <button style="background-color: #fff" onclick="color5()">default</button>
+
+    <script type="text/javascript">
+      function color1() {
+        document.body.style.backgroundColor = "red";
+        // document.body.style.backgroundImage =
+        //   "url('wallpaperflare.com_wallpaper.jpg')";
+        // alert("hello")
+      }
+      function color2() {
+        document.body.style.backgroundColor = "yellow";
+      }
+      function color3() {
+        document.body.style.backgroundColor = "lightblue";
+      }
+      function color4() {
+        document.body.style.backgroundColor = "orange";
+      }
+      function color5() {
+        document.body.style.backgroundColor = "#fff";
+      }
+    </script>
+  </body>
+</html>

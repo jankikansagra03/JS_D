@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dgree to radian</title>
+</head>
+
+<body>
+    <!-- <input type="number" id="d_r" placeholder="enter degree(2) or radian(1) "> -->
+    <input type="number" id="angle" placeholder="enter angle">
+    <select name="" id="d_r">
+        <option value="1">radian</option>
+        <option value="2">degree</option>
+
+
+    </select>
+
+    
+    <input type="button" value="click here" onclick="change()">
+
+    <script type="text/javascript">
+
+        var pi = Math.PI;
+        function change() {
+
+            var degrees = document.getElementById('angle').value;
+            var choice = document.getElementById('d_r').value;
+            var ans;
+            switch (choice) {
+                case '1':
+                    ans = degrees * (pi / 180);
+                    document.write("degree to radian = " + ans);
+                    break;
+
+                case '2':
+                    ans = degrees * (180 / pi);
+                    document.write("radian to degree = " + ans);
+                    break;
+
+                default:
+                    document.write("invalid case");
+                    break;
+            }
+
+
+
+        }
+
+    </script>
+
+</body>
+
+</html>

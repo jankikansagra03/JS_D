@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>base </title>
+</head>
+<body>
+
+    
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>finding maximum</title>
+</head>
+<body>
+    <h1>find maximum from three numbers</h1><br>
+
+    <input type="number" id="m1"><br>
+    <input type="number" id="m2"><br>
+    <input type="number" id="m3"><br>
+    <input type="button" value="click here" onclick="func()">
+    <p id="max">maximum value=</p>
+
+    
+    <script type="text/javascript">
+        function func(){
+
+var $no1=document.getElementById('m1').value;
+var $no2=document.getElementById('m2').value;
+var $no3=document.getElementById('m3').value;
+
+$no1 = parseInt($no1);
+$no2 = parseInt($no2);
+$no3 = parseInt($no3);
+
+
+if ($no1 > $no2 && $no1 > $no3) {
+    document.getElementById('max').innerHTML=$no1;
+}
+else if($no2 > $no1 && $no2 > $no3){
+    document.getElementById('max').innerHTML=$no2;
+}
+else{
+    document.getElementById('max').innerHTML=$no3;
+}
+
+}
+    </script>
+</body>
+</html>

@@ -1,0 +1,44 @@
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script>
+      function demo() {
+        let n = document.getElementById("n").value;
+        let k = document.getElementById("k").value;
+        let factofn = 1;
+        let factofk = 1;
+
+        let i = 1;
+        if (n < k) {
+          document.write("invalid");
+        } else {
+          for (i = 1; i <= n; i++) {
+            factofn = factofn * i;
+          }
+
+          for (i = 1; i <= k; i++) {
+            factofk = factofk * i;
+          }
+
+          let sub = n - k;
+          let factofsub = 1;
+          for (i = 1; i <= sub; i++) {
+            factofsub = factofsub * i;
+          }
+          let sum = factofk * factofsub;
+          let answer = factofn / sum;
+
+          document.getElementById("ans").innerHTML = answer;
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <input type="text" id="n" />
+    <input type="text" id="k" />
+    <input type="button" value="answer" onclick="demo()" />
+    <p id="ans"></p>
+  </body>
+</html>
